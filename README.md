@@ -1,3 +1,80 @@
+# Django Development Project
+
+This repository contains a user creation and authentication project. The main objective of this project is to establish a solid foundation for web application development using the Django framework, putting acquired knowledge into practice and thereby evolving as a developer.
+
+The Front-End is developed using Bootstrap.
+
+## Environment Setup
+
+Make sure you have Python and pip installed on your system. It is recommended to use virtual environments to isolate project dependencies. To set up the environment, follow the steps below:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/FerrariSnow/UserAuthentication.git
+   cd UserAuthentication
+   ```
+
+2. **Create a virtual environment (optional but recommended):**
+   ```bash
+   python -m venv venv
+   ```
+
+3. **Activate the virtual environment:**
+   - On Windows:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - On macOS/Linux:
+     ```bash
+     source venv/bin/activate
+     ```
+
+4. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Database Configuration
+
+This project is configured to use SQLite by default. If you want to use another database, adjust the settings in the `settings.py` file as needed.
+
+Run migrations to apply changes to the database:
+```bash
+python manage.py migrate
+```
+
+## Running the Development Server
+
+Start the development server with the following command:
+```bash
+python manage.py runserver
+```
+
+Access the project at [http://localhost:8000/](http://localhost:8000/).
+
+## Contributing
+
+Feel free to contribute to this project. Before submitting a pull request, make sure to follow the contribution guidelines.
+
+## Main Directories
+
+- **UserAuthentication/**
+  - **UserAuthentication/**
+    - `settings.py`: Project settings.
+    - `urls.py`: Routing configurations.
+  - `manage.py`: Django command-line utility.
+  - `requirements.txt`: List of project dependencies.
+  - `venv/`: Virtual environment (can be ignored if you are not using a virtual environment).
+  - `README.md`: This file.
+
+## Issues or Questions?
+
+If you encounter issues or have questions, please open an issue on GitHub.
+
+Thank you for reading this far; have a great day ! :v:
+
+
+
 # Projeto Django em Desenvolvimento
 
 Este repositório contém um projeto de criação e autenticação de usuário, o objetivo principal deste projeto é adquirir uma base sólida para o desenvolvimento de aplicações web usando o framework Django, botando em prática o conhecimento adquirido e com isso evoluir como desenvolvedor.
