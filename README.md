@@ -1,6 +1,6 @@
 # Projeto Django em Desenvolvimento
 
-Este repositório contém um projeto de criação e autenticação de usuário, o objetivo principal deste projeto é adquirir uma base sólida para o desenvolvimento de aplicações web usando o framework Django.
+Este repositório contém um projeto de criação e autenticação de usuário, o objetivo principal deste projeto é adquirir uma base sólida para o desenvolvimento de aplicações web usando o framework Django, botando em prática o conhecimento adquirido e com isso evoluir como desenvolvedor.
 
 Front-End desenvolvido utilizando Bootstrap.
 
