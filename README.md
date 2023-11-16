@@ -1,6 +1,6 @@
 # Django Development Project
 
-This repository contains a user creation and authentication project. The main objective of this project is to establish a solid foundation for web application development using the Django framework, putting acquired knowledge into practice and thereby evolving as a developer.
+This repository contains a project of a Personal Blog, that contains a user creation and authentication project. When logged the User will have access to a To-Do List, to manage and create their own tasks. The main objective of this project is to establish a solid foundation for web application development using the Django framework, putting acquired knowledge into practice and thereby evolving as a developer.
 
 The Front-End is developed using Bootstrap.
 
@@ -10,8 +10,8 @@ Make sure you have Python and pip installed on your system. It is recommended to
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/FerrariSnow/UserAuthentication.git
-   cd UserAuthentication
+   git clone https://github.com/FerrariSnow/PersonalBlog.git
+   cd PersonalBlog
    ```
 
 2. **Create a virtual environment (optional but recommended):**
@@ -58,8 +58,8 @@ Feel free to contribute to this project. Before submitting a pull request, make 
 
 ## Main Directories
 
-- **UserAuthentication/**
-  - **UserAuthentication/**
+- **PersonalBlog/**
+  - **PersonalBlog/**
     - `settings.py`: Project settings.
     - `urls.py`: Routing configurations.
   - `manage.py`: Django command-line utility.
@@ -77,7 +77,7 @@ Thank you for reading this far; have a great day ! :v:
 
 # Projeto Django em Desenvolvimento
 
-Este repositório contém um projeto de criação e autenticação de usuário, o objetivo principal deste projeto é adquirir uma base sólida para o desenvolvimento de aplicações web usando o framework Django, botando em prática o conhecimento adquirido e com isso evoluir como desenvolvedor.
+Este repositório contém um projeto de um Blog Pessoal, que contem criação e autenticação de usuário. Quando logado, o usuário terá acesso a um To-Do List, para gerenciar e criar suas próprias tarefas. O objetivo principal deste projeto é adquirir uma base sólida para o desenvolvimento de aplicações web usando o framework Django, botando em prática o conhecimento adquirido e com isso evoluir como desenvolvedor.
 
 Front-End desenvolvido utilizando Bootstrap.
 
@@ -87,8 +87,8 @@ Certifique-se de ter o Python e o pip instalados em seu sistema. Recomenda-se o 
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/FerrariSnow/UserAuthentication.git
-   cd UserAuthentication
+   git clone https://github.com/FerrariSnow/PersonalBlog.git
+   cd PersonalBlog
    ```
 
 2. **Crie um ambiente virtual (opcional, mas recomendado):**
@@ -135,8 +135,8 @@ Sinta-se à vontade para contribuir para este projeto. Antes de enviar um pull r
 
 ## Diretórios Principais
 
-- **UserAuthentication/**
-  - **UserAuthentication/**
+- **PersonalBlog/**
+  - **PersonalBlog/**
     - `settings.py`: Configurações do projeto.
     - `urls.py`: Configurações de roteamento.
   - `manage.py`: Utilitário de linha de comando do Django.
