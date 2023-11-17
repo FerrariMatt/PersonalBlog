@@ -23,7 +23,7 @@
                 </button>
                 <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Acesso</h5>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -36,12 +36,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/tasks">Tasks</a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="/sair">Sair</a>
+                            <a class="nav-link" href="/exit">Exit</a>
                         </li>
 
                     {% else %}
@@ -52,20 +47,16 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/signup">Cadastrar</a>
+                            <a class="nav-link" href="/signup">Register</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="/signin">Logar</a>
+                            <a class="nav-link" href="/signin">Login</a>
                         </li>
 
-                        {% endif %}  
+                    {% endif %}  
 
                     </ul>
-                <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
                 </div>
             </div>
             </div>
