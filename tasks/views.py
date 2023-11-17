@@ -4,6 +4,13 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+
+
+from django.urls import reverse_lazy
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView, View
+
+from .models import Todo
 
 # Create your views here.
 
@@ -51,9 +58,25 @@ def signin(request):
             })
         else:
             login(request, user)
-            return redirect('home')
+            return redirect('tasks')
 
 @login_required
 def exit(request):
     logout (request)
     return redirect('home')
+
+# @method_decorator(login_required, name='dispatch')
+# class TodoListView(ListView):
+#     model = Todo
+
+@login_required
+def todo_list(request):
+    todos = Todo.objects.all()
+    return render(request, 'todo_list.html', {"todos": todos})
+
+
+@method_decorator(login_required, name='dispatch')
+class TodoCreateView(CreateView):
+    model = Todo
+    fields = ["title", "deadline"]
+    success_url = reverse_lazy("create")

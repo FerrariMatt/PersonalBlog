@@ -1,0 +1,21 @@
+{%  extends 'menu.html' %}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+
+{% block content %}
+
+<main class='container my-5'>
+    {% if todo.pk %}
+        <h1>Editar Tarefa</h1>  
+    {% else %}
+        <h1>Nova Tarefa</h1>
+    {% endif %}
+        <form method="POST">
+            {% csrf_token %}
+
+            {% comment %} {{ form|crispy }} {% endcomment %}
+
+            <button type='submit' class='btn btn-primary'>Salvar</button>
+        </form>
+</main>
+
+{% endblock %}
