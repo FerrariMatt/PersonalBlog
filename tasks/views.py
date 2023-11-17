@@ -69,14 +69,8 @@ def exit(request):
 class TodoListView(ListView):
     model = Todo
 
-# @login_required
-# def todo_list(request):
-#     todos = Todo.objects.all()
-#     return render(request, 'todo_list.html', {"todos": todos})
-
-
 @method_decorator(login_required, name='dispatch')
 class TodoCreateView(CreateView):
     model = Todo
     fields = ["title", "deadline"]
-    success_url = reverse_lazy("create")
+    success_url = reverse_lazy("tasks")
