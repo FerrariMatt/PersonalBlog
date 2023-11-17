@@ -80,3 +80,8 @@ class TodoUpdateView(UpdateView):
     model = Todo
     fields = ['title','deadline']
     success_url = reverse_lazy("tasks")
+
+@method_decorator(login_required, name='dispatch')
+class TodoDeleteView(DeleteView):
+    model = Todo
+    success_url = reverse_lazy("tasks")
