@@ -19,7 +19,7 @@ from django.urls import path
 from tasks import views
 
 from tasks.views import (
-    # TodoListView,
+    TodoListView,
     TodoCreateView,
     # TodoUpdateView,
     # TodoDeleteView,
@@ -32,6 +32,6 @@ urlpatterns = [
     path("signup", views.signup, name="signup"),
     path("signin", views.signin, name="signin"),
     path("exit", views.exit, name="exit"),
-    path("tasks", views.todo_list, name="tasks"),
+    path("tasks", TodoListView.as_view(), name="tasks"),
     path("create", TodoCreateView.as_view(), name="create"),
 ]

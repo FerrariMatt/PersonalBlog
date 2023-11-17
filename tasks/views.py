@@ -65,14 +65,14 @@ def exit(request):
     logout (request)
     return redirect('home')
 
-# @method_decorator(login_required, name='dispatch')
-# class TodoListView(ListView):
-#     model = Todo
+@method_decorator(login_required, name='dispatch')
+class TodoListView(ListView):
+    model = Todo
 
-@login_required
-def todo_list(request):
-    todos = Todo.objects.all()
-    return render(request, 'todo_list.html', {"todos": todos})
+# @login_required
+# def todo_list(request):
+#     todos = Todo.objects.all()
+#     return render(request, 'todo_list.html', {"todos": todos})
 
 
 @method_decorator(login_required, name='dispatch')
