@@ -18,8 +18,20 @@ from django.contrib import admin
 from django.urls import path
 from tasks import views
 
+from tasks.views import (
+    TodoListView,
+    TodoCreateView,
+    # TodoUpdateView,
+    # TodoDeleteView,
+    # TodoCompleteView,
+)
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.home, name="home"),
     path("signup", views.signup, name="signup"),
+    path("signin", views.signin, name="signin"),
+    path("exit", views.exit, name="exit"),
+    path("tasks", TodoListView.as_view(), name="tasks"),
+    path("create", TodoCreateView.as_view(), name="create"),
 ]
