@@ -1,3 +1,5 @@
+from datetime import date
+
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -85,3 +87,12 @@ class TodoUpdateView(UpdateView):
 class TodoDeleteView(DeleteView):
     model = Todo
     success_url = reverse_lazy("tasks")
+
+@method_decorator(login_required, name='dispatch')
+class TodoCompleteView(View):
+    def get(self, request, pk):
+        Todo.objects.get(pk=pk)
+        todo = get_object_or_404(Todo, pk=pk)
+        todo.finished_at = date.today()
+        todo.save()
+        return redirect('tasks')
