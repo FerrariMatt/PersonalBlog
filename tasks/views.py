@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -51,7 +52,8 @@ def signin(request):
         else:
             login(request, user)
             return redirect('home')
-        
+
+@login_required
 def exit(request):
-    logout(request)
-    return redirect(request, 'home.html')
+    logout (request)
+    return redirect('home')
