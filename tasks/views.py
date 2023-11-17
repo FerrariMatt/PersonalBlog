@@ -74,3 +74,9 @@ class TodoCreateView(CreateView):
     model = Todo
     fields = ["title", "deadline"]
     success_url = reverse_lazy("tasks")
+
+@method_decorator(login_required, name='dispatch')
+class TodoUpdateView(UpdateView):
+    model = Todo
+    fields = ['title','deadline']
+    success_url = reverse_lazy("tasks")

@@ -21,7 +21,7 @@ from tasks import views
 from tasks.views import (
     TodoListView,
     TodoCreateView,
-    # TodoUpdateView,
+    TodoUpdateView,
     # TodoDeleteView,
     # TodoCompleteView,
 )
@@ -34,4 +34,5 @@ urlpatterns = [
     path("exit", views.exit, name="exit"),
     path("tasks", TodoListView.as_view(), name="tasks"),
     path("create", TodoCreateView.as_view(), name="create"),
+    path("tasks/update/<int:pk>", TodoUpdateView.as_view(), name="update"),
 ]
