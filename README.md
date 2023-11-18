@@ -7,6 +7,8 @@ The Front-End is developed using Bootstrap.
 ## Application operation video
 
 
+https://github.com/FerrariSnow/PersonalBlog/assets/80928188/dca6045f-0bb2-4475-a368-1eaae356bcec
+
 
 ## Environment Setup
 
@@ -87,6 +89,8 @@ Front-End desenvolvido utilizando Bootstrap.
 
 ## Vídeo de funcionamento da aplicação
 
+
+https://github.com/FerrariSnow/PersonalBlog/assets/80928188/f8cbc948-89f8-4260-b0fd-3b1eb2957093
 
 
 ## Configuração do Ambiente
