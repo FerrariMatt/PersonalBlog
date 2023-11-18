@@ -4,6 +4,10 @@ This repository contains a project of a Personal Blog, that contains a user crea
 
 The Front-End is developed using Bootstrap.
 
+## Application operation video
+
+
+
 ## Environment Setup
 
 Make sure you have Python and pip installed on your system. It is recommended to use virtual environments to isolate project dependencies. To set up the environment, follow the steps below:
@@ -80,6 +84,10 @@ Thank you for reading this far; have a great day ! :v:
 Este repositório contém um projeto de um Blog Pessoal, que contem criação e autenticação de usuário. Quando logado, o usuário terá acesso a um To-Do List, para gerenciar e criar suas próprias tarefas. O objetivo principal deste projeto é adquirir uma base sólida para o desenvolvimento de aplicações web usando o framework Django, botando em prática o conhecimento adquirido e com isso evoluir como desenvolvedor.
 
 Front-End desenvolvido utilizando Bootstrap.
+
+## Vídeo de funcionamento da aplicação
+
+
 
 ## Configuração do Ambiente
 

@@ -1,3 +1,5 @@
+from datetime import date
+
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
@@ -30,7 +32,7 @@ def signup(request):
             try:
                 user = User.objects.create_user(username=request.POST['username'], password = request.POST['password1'], email = request.POST['useremail'])
                 user.save()
-                login(request, user)
+                # login(request, user)
                 return redirect('home')
             except: 
                 return render(request, 'signup.html', {
@@ -74,3 +76,23 @@ class TodoCreateView(CreateView):
     model = Todo
     fields = ["title", "deadline"]
     success_url = reverse_lazy("tasks")
+
+@method_decorator(login_required, name='dispatch')
+class TodoUpdateView(UpdateView):
+    model = Todo
+    fields = ['title','deadline']
+    success_url = reverse_lazy("tasks")
+
+@method_decorator(login_required, name='dispatch')
+class TodoDeleteView(DeleteView):
+    model = Todo
+    success_url = reverse_lazy("tasks")
+
+@method_decorator(login_required, name='dispatch')
+class TodoCompleteView(View):
+    def get(self, request, pk):
+        Todo.objects.get(pk=pk)
+        todo = get_object_or_404(Todo, pk=pk)
+        todo.finished_at = date.today()
+        todo.save()
+        return redirect('tasks')
