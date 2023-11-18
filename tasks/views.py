@@ -32,7 +32,7 @@ def signup(request):
             try:
                 user = User.objects.create_user(username=request.POST['username'], password = request.POST['password1'], email = request.POST['useremail'])
                 user.save()
-                login(request, user)
+                # login(request, user)
                 return redirect('home')
             except: 
                 return render(request, 'signup.html', {
